@@ -1,0 +1,312 @@
+
+/* ========================================
+   AMANJALAN - STYLE UTAMA
+   ======================================== */
+
+:root {
+    --hijau-tua: #155b43;
+    --hijau: #217653;
+    --hijau-muda: #e7f3eb;
+    --putih: #ffffff;
+    --latar: #f5f8f5;
+    --teks: #24372e;
+    --teks-redup: #6b7c72;
+    --garis: #dce7df;
+    --bayangan: 0 8px 28px rgba(26, 69, 48, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--latar);
+    color: var(--teks);
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(120deg, #124c39, #217653);
+    color: var(--putih);
+    padding: 24px max(20px, calc((100% - 1100px) / 2));
+}
+
+.header-utama {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header-teks h1,
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.header-teks p,
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #e0f0e5;
+}
+
+/* TOMBOL ADMIN */
+
+.tombol-admin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 18px;
+    background: rgba(255, 255, 255, 0.13);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.tombol-admin:hover {
+    background: rgba(255, 255, 255, 0.23);
+    transform: translateY(-1px);
+}
+
+/* KONTEN UTAMA */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 28px 20px 40px;
+    margin: 0 auto;
+}
+
+/* KARTU INFORMASI */
+
+.info {
+    background: var(--putih);
+    padding: 24px;
+    border: 1px solid var(--garis);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: var(--bayangan);
+}
+
+.info h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: var(--hijau-tua);
+}
+
+.info p {
+    margin: 0 0 16px;
+    color: var(--teks-redup);
+    font-size: 14px;
+}
+
+/* TOMBOL UMUM */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#gpsButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--hijau);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(33, 118, 83, 0.18);
+    transition: background 0.2s, transform 0.2s;
+}
+
+#gpsButton:hover {
+    background: var(--hijau-tua);
+    transform: translateY(-1px);
+}
+
+#gpsButton:focus-visible,
+.tombol-admin:focus-visible {
+    outline: 3px solid #a7d8b7;
+    outline-offset: 3px;
+}
+
+#statusGPS {
+    margin: 14px 0 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--hijau-muda);
+    color: var(--hijau-tua);
+    font-size: 13px;
+}
+
+/* PETA */
+
+#map {
+    width: 100%;
+    height: 480px;
+    border: 1px solid var(--garis);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #eaf0ec;
+    box-shadow: var(--bayangan);
+    z-index: 1;
+}
+
+/* TAUTAN */
+
+a {
+    transition: color 0.2s;
+}
+
+/* FORMULIR - HALAMAN ADMIN DAN LOGIN */
+
+.login-container,
+.admin-container {
+    width: calc(100% - 32px);
+    max-width: 520px;
+    margin: 36px auto;
+    padding: 28px;
+    background: var(--putih);
+    border: 1px solid var(--garis);
+    border-radius: 18px;
+    box-shadow: var(--bayangan);
+}
+
+.login-container h2,
+.admin-container h2 {
+    margin-top: 0;
+    color: var(--hijau-tua);
+}
+
+.login-container label,
+.admin-container label {
+    display: block;
+    margin: 16px 0 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login-container input,
+.admin-container input,
+.admin-container textarea,
+.admin-container select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #cbd9cf;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--teks);
+    font: inherit;
+}
+
+.login-container input:focus,
+.admin-container input:focus,
+.admin-container textarea:focus,
+.admin-container select:focus {
+    outline: 2px solid #b6dec3;
+    border-color: var(--hijau);
+}
+
+.login-container button,
+.admin-container button {
+    margin-top: 20px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: var(--hijau);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.login-container button {
+    width: 100%;
+}
+
+.login-container button:hover,
+.admin-container button:hover {
+    background: var(--hijau-tua);
+}
+
+.pesan-error {
+    padding: 10px 12px;
+    background: #fff0ef;
+    color: #a52620;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px 16px;
+    }
+
+    .header-utama {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .header-teks h1,
+    header h1 {
+        font-size: 24px;
+    }
+
+    .header-teks p,
+    header p {
+        font-size: 12px;
+    }
+
+    .tombol-admin {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 18px 14px 28px;
+    }
+
+    .info {
+        padding: 18px;
+        border-radius: 13px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    #map {
+        height: 400px;
+        border-radius: 13px;
+    }
+
+    .login-container,
+    .admin-container {
+        margin: 24px auto;
+        padding: 21px;
+        border-radius: 14px;
+    }
+}
